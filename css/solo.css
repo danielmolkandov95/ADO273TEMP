@@ -1,0 +1,36 @@
+body {
+    background-color: var(--color-secondary);
+    background-image: url("https://uploads-ssl.webflow.com/6363605dadc09d40e70c4ae7/63a35099fa137f53714811d4_leftvektor.svg"), url("https://uploads-ssl.webflow.com/6363605dadc09d40e70c4ae7/63a35099dcb75c36d40e92fe_rightvector.svg");
+    background-position: 100% 50%, 0px 0px;
+    background-size: 25%, 25%;
+    background-repeat: no-repeat, no-repeat;
+}
+body .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.box {
+    width: fit-content;
+    max-width: 100%;
+}
+.logo {
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 0;
+    }
+    .box {
+        width: 100%;
+        border-right: 0;
+        border-left: 0;
+    }
+    form {
+        width: 100%;
+        margin: 0 auto;
+    }
+}

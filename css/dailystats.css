@@ -1,0 +1,71 @@
+.box {
+    height: 100%;
+    padding: 12px;
+    gap: 0;
+}
+
+canvas {
+    max-width: 100%;
+}
+
+.row {
+    gap: .75em;
+}
+
+.row:not(.page-heading) {
+    grid-template-columns: 1fr 1.85fr;
+    background-color: var(--color-secondary-light);
+    padding: 1em;
+    border-radius: var(--border-radius);
+}
+
+.day-stats {
+    display: grid;
+    gap: .75em;
+    grid-template-columns: 1fr 1fr;
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow); 
+}
+
+.day-stats .box {
+    text-align: center;
+}
+
+.day-stats .box h5 {
+    color: var(--color-gray);
+    font-size: 0.875em;
+}
+
+.day-stats-value {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.row.profit .day-stats .box:last-child .day-stats-value {
+    color: var(--color-green);
+}
+
+.row.loss .day-stats .box:last-child .day-stats-value {
+    color: var(--color-red);
+}
+
+@media (max-width: 1200px) {
+    .day-stats-value {
+        font-size: 1.5em;
+    }
+    .box svg {
+        width: 150px;
+    }
+}
+
+@media (max-width: 786px) {
+    .row:not(.page-heading) {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .day-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+}

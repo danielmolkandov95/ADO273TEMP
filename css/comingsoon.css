@@ -1,0 +1,28 @@
+.box-heading {
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 4.025em;
+}
+
+.description {
+    font-size: 0.85em;
+    color: var(--color-gray);
+}
+
+form {
+    width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 3em;
+        text-align: center;
+    }
+    .description {
+        width: 75%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}

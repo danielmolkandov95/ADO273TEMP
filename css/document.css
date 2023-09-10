@@ -1,0 +1,44 @@
+:root {
+    --aside-width: 0;
+}
+h2 {
+    margin-bottom: 1em;
+}
+h4 {
+    font-weight: 700;
+}
+header {
+    width: 100%;
+}
+header:before {
+    content: none;
+}
+header .container {
+    justify-content: center;
+}
+main {
+    background: none;
+    float: none;
+}
+main .container {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1000px;
+}
+main .container > p {
+    margin: 0;
+}
+.page-heading {
+    background-color: var(--color-secondary-light);
+    padding: 2em;
+    text-align: center;
+    border-radius: var(--border-radius);
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+}
+a {
+    text-decoration: underline;
+}
+section > p:first-child {
+    margin-top: 0;
+}

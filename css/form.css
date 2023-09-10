@@ -1,0 +1,174 @@
+form {
+    width: 320px;
+    max-width: 100%;
+    background: var(--color-secondary-light);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+}
+.form-group {
+    gap: 7.5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.form-group.checkbox-group {
+    display: flex;
+    margin: 2.5px 0 12.5px;
+}
+.form-group:last-child {
+    margin-bottom: 0;
+}
+label {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 3px;
+}
+input:not([type="checkbox"]) {
+    display: block;
+    border-radius: var(--border-radius);
+    background-color: var(--color-secondary);
+    border: 1px solid var(--input-border);
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+    color: #fff;
+    font-size: 0.8125em;
+    height: 45px;
+    line-height: 1;
+    padding: var(--padding);
+    width: 100%;
+}
+input[type="file"] {
+    background-color: #1f1f1f;
+    background-color: var(--color-secondary-light);
+    border: 1px solid var(--input-border);
+    color: transparent;
+    cursor: pointer;
+    position: relative;
+}
+input[type="file"]:before {
+    color: var(--color-main);
+    content: "Click here to upload your file";
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.8125em;
+    left: 50%;
+    letter-spacing: 0.5px;
+    margin-right: -50%;
+    outline: none;
+    position: absolute;
+    top: 52%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-user-select: none;
+    white-space: nowrap;
+}
+input[type="file"].filled:before {
+    content: attr(data-filename);
+}
+input:focus {
+    border-color: var(--input-hover-border);
+    outline: 0;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+    -webkit-text-fill-color: var(--color-main);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid var(--input-border);
+    -webkit-box-shadow: 0 0 0 40rem var(--color-secondary) inset;
+}
+label[for="terms"] {
+    background: var(--color-gray);
+    cursor: pointer;
+    height: 12.5px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 12.5px;
+}
+label:not(.switch):after {
+    background: transparent;
+    border: 3px solid var(--color-secondary);
+    border-right: none;
+    border-top: none;
+    content: "";
+    height: 3px;
+    left: 2px;
+    opacity: 0;
+    position: absolute;
+    top: 2px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    width: 7px;
+}
+label:hover:after {
+    opacity: 0.3;
+}
+input[type="checkbox"] {
+    border-radius: 0;
+    margin: 0;
+    visibility: hidden;
+}
+input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+}
+form span {
+    color: #8a8f98;
+    color: var(--color-gray);
+    font-size: 11px;
+}
+form a {
+    text-decoration: underline;
+}
+form button {
+    width: 100%;
+    justify-content: center;
+    min-height: 50px;
+}
+.form-links {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 17.5px;
+}
+
+
+/* ERROR HANDELING */
+.form-group .error-message {
+    margin-top: 5px;
+}
+input:invalid[focused="true"] ~ span.error-message {
+    display: block;
+}
+input:invalid[focused="true"] {
+    border: 1px solid #d25c5a;
+    border: 1px solid var(--color-red);
+}
+span.error-message {
+    font-size: 12px;
+    padding: 3px;
+}
+.form-error,
+span.error-message {
+    display: none;
+    color: #d25c5a;
+    color: var(--color-red);
+    text-transform: lowercase;
+}
+.form-error {
+    font-size: 0.7em;
+    text-align: center;
+}
+.form-error.show {
+    display: block;
+}
+.form-error::first-letter, span.error-message::first-letter {
+    text-transform: uppercase;
+}
